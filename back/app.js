@@ -6,6 +6,7 @@ const path = require("path");
 require('dotenv').config();
 
 
+
 const userRoutes = require("./route/user");
 const sauceRoutes = require("./route/sauce");
 
@@ -18,6 +19,7 @@ mongoose
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 
+/*-----Configuration corps-----*/
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
